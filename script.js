@@ -1,15 +1,15 @@
 function isSameType(value1, value2) {
   //your js code here
-	if(a === 'NaN') a = NaN;
-	if(b === 'NaN') b = NaN;
+	if(value1 === 'NaN') return NaN;
+	if(value2 === 'NaN') return NaN;
 
-	if(!isNaN(a)) a = Number(a);
-	if(!isNaN(b)) b = Number(b);
+	if(!isNaN(value1)) value1 = Number(value1);
+	if(!isNaN(value2)) value2 = Number(value2);
 
-	if(Number.isNaN(a) && Number.isNaN(b)) return true;
-	if(Number.isNaN(a) || Number.isNaN(b)) return false;
+	if(Number.isNaN(value1) && Number.isNaN(value2)) return true;
+	if(Number.isNaN(value1) || Number.isNaN(value2)) return false;
 
-	return typeof a === typeof b ;
+	return typeof value1 === typeof value2;
 }
 
 // do not change the code below.
